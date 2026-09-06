@@ -1612,28 +1612,28 @@ function notifyNative(title, body) {
 }
 
 function checkReminders() {
-  for (const t of tenders) {
-    if ((t.status !== 'Pending' && t.status !== 'Participated') || t.reminderSent) continue;
-    const days = daysUntil(t.date);
-    if (days === null || days > (t.reminderDays ?? 3)) continue;
-    const msg = days < 0 ? `Overdue: ${t.customer} tender (#${t.no}) was due ${-days} day(s) ago.`
-      : days === 0 ? `Due today: ${t.customer} tender (#${t.no}).`
-      : `Reminder: ${t.customer} tender (#${t.no}) is due in ${days} day(s).`;
+  for (const tender of tenders) {
+    if ((tender.status !== 'Pending' && tender.status !== 'Participated') || tender.reminderSent) continue;
+    const days = daysUntil(tender.date);
+    if (days === null || days > (tender.reminderDays ?? 3)) continue;
+    const msg = days < 0 ? `Overdue: ${tender.customer} tender (#${tender.no}) was due ${-days} day(s) ago.`
+      : days === 0 ? `Due today: ${tender.customer} tender (#${tender.no}).`
+      : `Reminder: ${tender.customer} tender (#${tender.no}) is due in ${days} day(s).`;
     toast(msg, 'warning', 7000);
     notifyNative(t('notify_deadline_title'), msg);
-    t.reminderSent = true;
-    persistTender(t);
+    tender.reminderSent = true;
+    persistTender(tender);
   }
 
-  for (const t of tenders) {
-    if (t.cpo !== 'Yes' || t.cpoCollected || t.cpoReminderSent) continue;
-    const days = daysUntil(t.date);
+  for (const tender of tenders) {
+    if (tender.cpo !== 'Yes' || tender.cpoCollected || tender.cpoReminderSent) continue;
+    const days = daysUntil(tender.date);
     if (days === null || days > 0) continue; // only once the deadline has actually passed
-    const msg = `CPO collection due: ${t.customer} (#${t.no}) — bid closed ${-days} day(s) ago, collateral not yet collected.`;
+    const msg = `CPO collection due: ${tender.customer} (#${tender.no}) — bid closed ${-days} day(s) ago, collateral not yet collected.`;
     toast(msg, 'warning', 7000);
     notifyNative(t('notify_cpo_title'), msg);
-    t.cpoReminderSent = true;
-    persistTender(t);
+    tender.cpoReminderSent = true;
+    persistTender(tender);
   }
 
   for (const c of contracts) {
@@ -3252,32 +3252,32 @@ function openTenderModal() {
   document.getElementById('tenderModal').classList.remove('hidden');
 }
 function editTender(id) {
-  const t = tenders.find((x) => x.id === id);
-  if (!t) return;
+  const tender = tenders.find((x) => x.id === id);
+  if (!tender) return;
   document.getElementById('editId').value = id;
   document.getElementById('modalTitle').textContent = t('modal_edit');
-  document.getElementById('tName').value = t.customer || '';
-  document.getElementById('tContact').value = t.contact || '';
-  document.getElementById('tPhone').value = t.phone || '';
+  document.getElementById('tName').value = tender.customer || '';
+  document.getElementById('tContact').value = tender.contact || '';
+  document.getElementById('tPhone').value = tender.phone || '';
   populateProductSelect();
-  document.getElementById('tProd').value = t.product || 'Vehicle Maintenance';
-  document.getElementById('tQty').value = t.qty ?? 1;
-  document.getElementById('tVType').value = t.vType || 'Bus';
-  document.getElementById('tFType').value = t.fType || 'Diesel';
-  document.getElementById('tNo').value = t.no || '';
-  document.getElementById('tDate').value = t.date || '';
-  document.getElementById('tCPO').value = t.cpo || 'No';
-  document.getElementById('tCPOVal').value = t.cpoAmount || 0;
-  document.getElementById('tCpoCollected').value = t.cpoCollected ? 'Yes' : 'No';
-  document.getElementById('tVal').value = t.value || 0;
-  document.getElementById('tStatus').value = t.status || 'Pending';
-  document.getElementById('tRepStatus').value = t.repStatus || 'Pending';
-  document.getElementById('tRemark').value = t.remark || '';
-  document.getElementById('tReminderDays').value = t.reminderDays ?? 3;
-  originalEditDate = t.date || null;
+  document.getElementById('tProd').value = tender.product || 'Vehicle Maintenance';
+  document.getElementById('tQty').value = tender.qty ?? 1;
+  document.getElementById('tVType').value = tender.vType || 'Bus';
+  document.getElementById('tFType').value = tender.fType || 'Diesel';
+  document.getElementById('tNo').value = tender.no || '';
+  document.getElementById('tDate').value = tender.date || '';
+  document.getElementById('tCPO').value = tender.cpo || 'No';
+  document.getElementById('tCPOVal').value = tender.cpoAmount || 0;
+  document.getElementById('tCpoCollected').value = tender.cpoCollected ? 'Yes' : 'No';
+  document.getElementById('tVal').value = tender.value || 0;
+  document.getElementById('tStatus').value = tender.status || 'Pending';
+  document.getElementById('tRepStatus').value = tender.repStatus || 'Pending';
+  document.getElementById('tRemark').value = tender.remark || '';
+  document.getElementById('tReminderDays').value = tender.reminderDays ?? 3;
+  originalEditDate = tender.date || null;
   document.getElementById('extendedNotice').classList.add('hidden');
   toggleCpoField(); toggleVehicleFields();
-  renderDocAttachSection(t);
+  renderDocAttachSection(tender);
   document.getElementById('tenderModal').classList.remove('hidden');
 }
 function closeTenderModal() { document.getElementById('tenderModal').classList.add('hidden'); }
@@ -3331,16 +3331,16 @@ document.getElementById('tenderForm').addEventListener('submit', (ev) => {
 });
 
 function removeTender(id) {
-  const t = tenders.find((x) => x.id === id);
-  if (!t) return;
-  if (!confirm(`Delete the tender for "${t.customer}"? This cannot be undone.`)) return;
+  const tender = tenders.find((x) => x.id === id);
+  if (!tender) return;
+  if (!confirm(`Delete the tender for "${tender.customer}"? This cannot be undone.`)) return;
   deleteTenderStorage(id);
   tenders = tenders.filter((x) => x.id !== id);
   if (findContractByTenderId(id)) {
     deleteContractStorage(id);
     contracts = contracts.filter((c) => c.tenderId !== id);
   }
-  logActivity('delete', 'Tender deleted', t.customer);
+  logActivity('delete', 'Tender deleted', tender.customer);
   refreshCurrentView();
   toast(t('toast_tender_deleted'), 'success');
 }
