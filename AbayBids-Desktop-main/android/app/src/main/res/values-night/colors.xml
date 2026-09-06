@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Brand: gold accent -->
+    <color name="brand_primary">#D4A74E</color>
+    <color name="brand_primary_dark">#0B1220</color>
+    <color name="brand_accent">#D4A74E</color>
+    <color name="brand_amber">#F59E0B</color>
+
+    <!-- Status colors (slightly brighter for dark backgrounds) -->
+    <color name="status_participated">#3B82F6</color>
+    <color name="status_pending">#F59E0B</color>
+    <color name="status_won">#22C55E</color>
+    <color name="status_lost">#EF4444</color>
+    <color name="status_active">#8B5CF6</color>
+    <color name="status_notpart">#9CA3AF</color>
+
+    <!-- DARK MODE: modern deep navy (NOT brown/black) -->
+    <color name="bg">#0F172A</color>
+    <color name="bg_card">#1E293B</color>
+    <color name="bg_card_alt">#172033</color>
+    <color name="text_primary">#E8EAED</color>
+    <color name="text_secondary">#8B949E</color>
+    <color name="text_muted">#64748B</color>
+    <color name="divider">#334155</color>
+</resources>

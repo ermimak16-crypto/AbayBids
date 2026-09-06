@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Brand: gold accent (used for buttons, selected items, FAB — NOT the header) -->
+    <color name="brand_primary">#D4A74E</color>
+    <color name="brand_primary_dark">#1E293B</color>
+    <color name="brand_accent">#D4A74E</color>
+    <color name="brand_amber">#F59E0B</color>
+
+    <!-- Status colors (semantic — same meaning in both themes) -->
+    <color name="status_participated">#2563EB</color>
+    <color name="status_pending">#D97706</color>
+    <color name="status_won">#16A34A</color>
+    <color name="status_lost">#DC2626</color>
+    <color name="status_active">#7C3AED</color>
+    <color name="status_notpart">#6B7280</color>
+
+    <!-- LIGHT MODE: clean professional business appearance -->
+    <color name="bg">#F5F7FA</color>
+    <color name="bg_card">#FFFFFF</color>
+    <color name="bg_card_alt">#F1F5F9</color>
+    <color name="text_primary">#1E293B</color>
+    <color name="text_secondary">#475569</color>
+    <color name="text_muted">#94A3B8</color>
+    <color name="divider">#E2E8F0</color>
+</resources>

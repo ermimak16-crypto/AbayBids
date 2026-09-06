@@ -1,0 +1,40 @@
+name: Build Windows installer
+
+# Builds AbayBids.exe (NSIS installer) on every push to main, and lets you
+# trigger it manually from the Actions tab. Download the installer from
+# the workflow run's "Artifacts" section when it finishes.
+on:
+  push:
+    branches: [main, master]
+  workflow_dispatch: {}
+
+jobs:
+  build-windows:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install Rust
+        uses: dtolnay/rust-toolchain@stable
+
+      - name: Install Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Cache Rust build
+        uses: Swatinem/rust-cache@v2
+        with:
+          workspaces: src-tauri
+
+      - name: Install frontend/CLI dependencies
+        run: npm install
+
+      - name: Build Tauri app (NSIS installer)
+        run: npm run build
+
+      - name: Upload installer artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: AbayBids-Windows-Installer
+          path: src-tauri/target/release/bundle/nsis/*.exe

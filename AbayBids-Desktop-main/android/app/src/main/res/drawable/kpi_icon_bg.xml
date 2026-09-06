@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Rounded colored background for KPI icons (matches the reference screenshot's
+     colored icon chips: blue/gold/green/purple/teal). The actual tint is applied
+     at runtime via setColorFilter on the ImageView; this drawable provides the
+     rounded-rect background with a subtle translucent fill. -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <solid android:color="#1AFFFFFF" />
+    <corners android:radius="8dp" />
+</shape>

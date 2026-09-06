@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Abay Bids</string>
+    <string name="tagline">Building trust. Delivering value.</string>
+
+    <!-- Activities / sections -->
+    <string name="title_dashboard">Dashboard</string>
+    <string name="sub_dashboard">Overview of tender activities and performance</string>
+    <string name="title_tenders">All Tenders</string>
+    <string name="sub_tenders">Browse, search, and filter every tender</string>
+    <string name="title_add_tender">Add Tender</string>
+    <string name="title_edit_tender">Edit Tender</string>
+    <string name="title_settings">Settings</string>
+    <string name="title_deadline_detail">Tender Detail</string>
+
+    <!-- KPI labels -->
+    <string name="kpi_total">Total</string>
+    <string name="kpi_total_sub">all-time</string>
+    <string name="kpi_pending">Pending</string>
+    <string name="kpi_won">Won</string>
+    <string name="kpi_participated">Participated</string>
+    <string name="kpi_active">Active</string>
+    <string name="kpi_lost">Lost</string>
+    <string name="kpi_success_rate">Success Rate</string>
+    <string name="kpi_total_value">Total Value</string>
+
+    <!-- Cards -->
+    <string name="status_overview">Tender Status Overview</string>
+    <string name="monthly_summary">Monthly Tender Summary</string>
+    <string name="upcoming_deadlines">Upcoming Deadlines</string>
+    <string name="recent_tenders">Recent Tenders</string>
+    <string name="view_all">View all</string>
+    <string name="this_year">This Year</string>
+
+    <!-- Tender list -->
+    <string name="search_tenders">Search customer or tender no…</string>
+    <string name="filter_all">All</string>
+    <string name="filter_participated">Participated</string>
+    <string name="filter_pending">Pending</string>
+    <string name="filter_won">Won</string>
+    <string name="filter_lost">Lost</string>
+    <string name="empty_tenders">No tenders yet. Tap + to add one.</string>
+    <string name="empty_filter">No tenders match this filter.</string>
+
+    <!-- Form -->
+    <string name="f_customer">Customer / Organization</string>
+    <string name="f_no">Tender No</string>
+    <string name="f_product">Category</string>
+    <string name="f_date">Bid Deadline (YYYY-MM-DD)</string>
+    <string name="f_value">Est. Value (ETB)</string>
+    <string name="f_status">Status</string>
+    <string name="f_cpo">Bid Bond (CPO) Deposited</string>
+    <string name="f_cpo_amount">CPO Amount (ETB)</string>
+    <string name="f_reminder_days">Reminder (days before)</string>
+    <string name="f_contact">Contact Person</string>
+    <string name="f_phone">Phone</string>
+    <string name="f_qty">Quantity</string>
+    <string name="f_remark">Remark</string>
+    <string name="save_tender">Save Tender</string>
+    <string name="delete_tender">Delete</string>
+    <string name="mark_cpo_collected">Mark CPO Collected</string>
+    <string name="edit_tender">Edit</string>
+
+    <!-- Detail -->
+    <string name="days_left">Days left</string>
+    <string name="days_overdue">overdue</string>
+    <string name="deadline">Deadline</string>
+    <string name="category">Category</string>
+    <string name="est_value">Est. Value</string>
+    <string name="status">Status</string>
+    <string name="contact_person">Contact</string>
+    <string name="phone">Phone</string>
+    <string name="remark">Remark</string>
+    <string name="reminder_set">Reminder</string>
+
+    <!-- Settings -->
+    <string name="settings_notifications">Tender Reminders</string>
+    <string name="settings_notifications_sub">Status-bar reminders for upcoming deadlines (even when the app is closed)</string>
+    <string name="settings_default_reminder">Default reminder window</string>
+    <string name="settings_default_reminder_sub_days">Fire %1$d days before the deadline (per-tender overrides still apply)</string>
+    <string name="settings_battery">Disable battery optimization</string>
+    <string name="settings_battery_sub">Required for on-time reminders in Doze mode</string>
+    <string name="settings_test_notification">Send a test reminder now</string>
+    <string name="settings_test_sub">Posts a notification in 5 seconds — to verify the channel works</string>
+    <string name="settings_about">Abay Bids · Native Android · v1.0.0</string>
+    <string name="settings_about_sub">Local reminders — no paid services, works offline</string>
+
+    <!-- Notifications -->
+    <string name="channel_deadlines_name">Tender Deadlines</string>
+    <string name="channel_deadlines_desc">Reminders for upcoming bid deadlines and CPO collection.</string>
+    <string name="channel_cpo_name">CPO Collection</string>
+    <string name="channel_cpo_desc">Reminders to collect back deposited bid bonds (CPOs).</string>
+    <string name="notif_test_title">Abay Bids — Test reminder</string>
+    <string name="notif_test_body">If you can see this, status-bar reminders are working. Tap to open the tender detail.</string>
+
+    <!-- Actions -->
+    <string name="action_add">+ Add Tender</string>
+    <string name="action_search">Search</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_back">Back</string>
+    <string name="action_save">Save</string>
+    <string name="action_cancel">Cancel</string>
+    <string name="action_ok">OK</string>
+    <string name="action_grant">Grant</string>
+
+    <!-- Errors -->
+    <string name="err_required">Required</string>
+    <string name="err_date_format">Use YYYY-MM-DD</string>
+</resources>

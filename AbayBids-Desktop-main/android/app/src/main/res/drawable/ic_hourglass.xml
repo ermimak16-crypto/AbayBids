@@ -1,0 +1,8 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp" android:height="24dp" android:viewportWidth="24" android:viewportHeight="24">
+    <!-- Windows "hourglass" icon -->
+    <path android:strokeColor="@android:color/white" android:strokeWidth="2" android:fillColor="#00000000"
+        android:pathData="M6,3h12M6,21h12" />
+    <path android:strokeColor="@android:color/white" android:strokeWidth="2" android:fillColor="#00000000"
+        android:pathData="M7,3c0,5 5,6 5,9s-5,4 -5,9M17,3c0,5 -5,6 -5,9s5,4 5,9" />
+</vector>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Plain circle, tinted per-status at runtime (see ItemStatusBarBinding usage
+     in MainActivity.renderStatusOverview) — the small legend dot next to
+     each status row under the donut chart. -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="oval">
+    <solid android:color="#FFFFFF" />
+    <size android:width="12dp" android:height="12dp" />
+</shape>

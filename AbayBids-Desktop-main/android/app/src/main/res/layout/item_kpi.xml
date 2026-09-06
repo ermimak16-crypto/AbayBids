@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- A single KPI tile matching the reference screenshot:
+     icon top-right (colored), label top-left (uppercase gray), big value, sub text. -->
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="0dp"
+    app:layout_columnWeight="1"
+    app:layout_rowWeight="1"
+    app:layout_gravity="fill"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="0dp"
+    app:strokeWidth="1dp"
+    app:strokeColor="@color/divider">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="14dp">
+
+        <!-- Label (top-left, uppercase, small, muted) -->
+        <TextView
+            android:id="@+id/kpiLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            tools:text="TOTAL"
+            android:textColor="@color/text_muted"
+            android:textSize="9.5sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.05"
+            android:ellipsize="end"
+            android:maxLines="1" />
+
+        <!-- Icon (top-right, colored background) -->
+        <ImageView
+            android:id="@+id/kpiIcon"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:contentDescription="@null"
+            android:src="@drawable/ic_assessment"
+            android:padding="5dp"
+            android:background="@drawable/kpi_icon_bg" />
+
+        <!-- Value (big, bold, below label) -->
+        <TextView
+            android:id="@+id/kpiValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/kpiLabel"
+            android:layout_marginTop="6dp"
+            tools:text="12"
+            android:textColor="@color/text_primary"
+            android:textStyle="bold"
+            android:textSize="22sp" />
+
+        <!-- Sub text (below value) -->
+        <TextView
+            android:id="@+id/kpiSub"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/kpiValue"
+            android:layout_marginTop="2dp"
+            tools:text="all-time"
+            android:textColor="@color/text_muted"
+            android:textSize="10.5sp"
+            android:maxLines="1"
+            android:ellipsize="end" />
+
+    </RelativeLayout>
+</com.google.android.material.card.MaterialCardView>

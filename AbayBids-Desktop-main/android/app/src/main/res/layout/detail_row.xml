@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- A label/value row inside the detail card. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingTop="8dp"
+    android:paddingBottom="8dp">
+
+    <TextView
+        android:id="@+id/detailRowLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Category"
+        android:textColor="@color/text_muted"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/detailRowValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        tools:text="Construction"
+        android:textColor="@color/text_primary"
+        android:textSize="15sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/divider" />
+</LinearLayout>

@@ -1,0 +1,43 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "AbayBids",
+  "version": "1.0.0",
+  "identifier": "com.abaytechnical.abaybids",
+  "build": {
+    "frontendDist": "../dist"
+  },
+  "app": {
+    "withGlobalTauri": false,
+    "windows": [],
+    "security": {
+      "csp": null
+    }
+  },
+  "bundle": {
+    "active": true,
+    "publisher": "Abay Technical & Trading s.c",
+    "copyright": "Copyright (c) Abay Technical & Trading s.c",
+    "category": "Business",
+    "shortDescription": "Smart Tender & Bid Management System",
+    "longDescription": "AbayBids is the desktop application for Abay Technical & Trading s.c's Smart Tender System: manage tenders, bids, clients, contracts, documents and reports from a normal desktop window.",
+    "targets": ["nsis"],
+    "icon": [
+      "icons/32x32.png",
+      "icons/128x128.png",
+      "icons/128x128@2x.png",
+      "icons/icon.png",
+      "icons/icon.ico"
+    ],
+    "windows": {
+      "webviewInstallMode": {
+        "type": "offlineInstaller"
+      },
+      "nsis": {
+        "installMode": "currentUser",
+        "installerHooks": "installer/hooks.nsh",
+        "startMenuFolder": "AbayBids",
+        "languages": ["English"]
+      }
+    }
+  }
+}

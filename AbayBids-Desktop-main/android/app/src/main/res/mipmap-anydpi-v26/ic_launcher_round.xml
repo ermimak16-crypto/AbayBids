@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Adaptive launcher icon (Android 8.0+). minSdk=26 so no PNG fallback needed.
+     Foreground is the actual rendered Abay Technical logo PNG (mipmap-anydpi-v26
+     would be too coarse — using density-qualified PNG mipmaps instead). -->
+<adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android">
+    <background android:drawable="@drawable/ic_launcher_background" />
+    <foreground android:drawable="@mipmap/ic_launcher_foreground" />
+    <monochrome android:drawable="@mipmap/ic_launcher_foreground" />
+</adaptive-icon>

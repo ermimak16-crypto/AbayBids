@@ -1,0 +1,10 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp" android:height="24dp" android:viewportWidth="24" android:viewportHeight="24">
+    <!-- Windows "products" icon: 3D box -->
+    <path android:strokeColor="@android:color/white" android:strokeWidth="2" android:fillColor="#00000000"
+        android:pathData="M21,8L12,3L3,8L12,13L21,8z" />
+    <path android:strokeColor="@android:color/white" android:strokeWidth="2" android:fillColor="#00000000"
+        android:pathData="M3,8v8l9,5 9,-5V8" />
+    <path android:strokeColor="@android:color/white" android:strokeWidth="2" android:fillColor="#00000000"
+        android:pathData="M12,13v8" />
+</vector>

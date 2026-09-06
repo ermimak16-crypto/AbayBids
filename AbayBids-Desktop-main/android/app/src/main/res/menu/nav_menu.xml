@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_dashboard"
+            android:title="Dashboard"
+            android:icon="@drawable/ic_dashboard" />
+        <item
+            android:id="@+id/nav_tenders"
+            android:title="All Tenders"
+            android:icon="@drawable/ic_tenders" />
+        <item
+            android:id="@+id/nav_add_tender"
+            android:title="Add Tender"
+            android:icon="@drawable/ic_add_circle" />
+        <item
+            android:id="@+id/nav_clients"
+            android:title="Clients &amp; Organizations"
+            android:icon="@drawable/ic_people" />
+        <item
+            android:id="@+id/nav_products"
+            android:title="Products &amp; Services"
+            android:icon="@drawable/ic_inventory" />
+        <item
+            android:id="@+id/nav_calendar"
+            android:title="Calendar"
+            android:icon="@drawable/ic_calendar2" />
+        <item
+            android:id="@+id/nav_reports"
+            android:title="Reports"
+            android:icon="@drawable/ic_assessment" />
+        <item
+            android:id="@+id/nav_analytics"
+            android:title="Analytics"
+            android:icon="@drawable/ic_trending_up" />
+        <item
+            android:id="@+id/nav_bid_history"
+            android:title="Bid History"
+            android:icon="@drawable/ic_history" />
+        <item
+            android:id="@+id/nav_contracts"
+            android:title="Contracts"
+            android:icon="@drawable/ic_clipboard" />
+        <item
+            android:id="@+id/nav_documents"
+            android:title="Documents"
+            android:icon="@drawable/ic_description" />
+        <item
+            android:id="@+id/nav_settings"
+            android:title="Settings"
+            android:icon="@drawable/ic_settings" />
+    </group>
+</menu>

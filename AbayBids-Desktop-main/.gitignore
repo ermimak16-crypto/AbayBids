@@ -1,0 +1,13 @@
+node_modules/
+package-lock.json
+src-tauri/target/
+src-tauri/gen/
+.DS_Store
+
+# Android
+android/local.properties
+android/**/build/
+android/.gradle/
+android/*.iml
+android/.idea/
+Thumbs.db

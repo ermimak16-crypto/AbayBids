@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Foreground: a white document/tender mark with an "A" wave (Abay = Nile).
+     Sized to fit inside the 108dp adaptive icon safe zone (center 66% region). -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Document body -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M38,28 h22 l14,14 v36 a4,4 0 0 1 -4,4 h-32 a4,4 0 0 1 -4,-4 z" />
+    <!-- Folded corner -->
+    <path
+        android:fillColor="#E2F3EB"
+        android:pathData="M60,28 v10 a4,4 0 0 0 4,4 h10 z" />
+    <!-- Lines on document -->
+    <path
+        android:fillColor="#0E9F6E"
+        android:pathData="M44,50 h18 v3 h-18 z" />
+    <path
+        android:fillColor="#0E9F6E"
+        android:pathData="M44,57 h18 v3 h-18 z" />
+    <!-- "A" mark / Nile wave -->
+    <path
+        android:fillColor="#0E9F6E"
+        android:pathData="M44,68 h18 l-3,4 l-3,-2 l-3,4 l-3,-4 l-3,2 z" />
+</vector>

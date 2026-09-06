@@ -1,0 +1,10 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp" android:height="24dp" android:viewportWidth="24" android:viewportHeight="24">
+    <!-- Windows "tenders" icon: clipboard with lines -->
+    <path android:strokeColor="@android:color/white" android:strokeWidth="2" android:fillColor="#00000000"
+        android:pathData="M6,5h12v16a2,2 0 0,1 -2,2H8a2,2 0 0,1 -2,-2z" />
+    <path android:strokeColor="@android:color/white" android:strokeWidth="2" android:fillColor="#00000000"
+        android:pathData="M9,3h6v4H9z" />
+    <path android:strokeColor="@android:color/white" android:strokeWidth="2" android:fillColor="#00000000"
+        android:pathData="M9,10h6M9,14h6M9,18h3" />
+</vector>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_bottom_dashboard"
+        android:title="Home"
+        android:icon="@drawable/ic_dashboard" />
+    <item
+        android:id="@+id/nav_bottom_tenders"
+        android:title="Tenders"
+        android:icon="@drawable/ic_tenders" />
+    <item
+        android:id="@+id/nav_bottom_add"
+        android:title="Add"
+        android:icon="@drawable/ic_add_circle" />
+    <item
+        android:id="@+id/nav_bottom_calendar"
+        android:title="Calendar"
+        android:icon="@drawable/ic_calendar2" />
+    <item
+        android:id="@+id/nav_bottom_more"
+        android:title="More"
+        android:icon="@drawable/ic_menu" />
+</menu>
