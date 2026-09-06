@@ -1,0 +1,56 @@
+name: Web Preview
+
+# Publishes dist/index.html (the same dashboard the desktop app and Android
+# app load) to GitHub Pages, so you can open it in a browser and click
+# through it without building the Windows installer or the APK. Runs on
+# every push that touches dist/, and any time you click "Run workflow" in
+# the Actions tab.
+#
+# One-time setup after this file is pushed:
+#   Repo -> Settings -> Pages -> Build and deployment -> Source: "GitHub
+#   Actions". After that, every run of this workflow updates the same
+#   preview URL, shown as "github-pages" in the run's summary and under
+#   Settings -> Pages.
+on:
+  push:
+    branches: [main, master]
+    paths:
+      - "dist/**"
+      - ".github/workflows/preview.yml"
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build-preview:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Stage preview site
+        run: |
+          mkdir site
+          cp dist/index.html site/index.html
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+  deploy-preview:
+    needs: build-preview
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
